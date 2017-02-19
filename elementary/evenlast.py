@@ -17,4 +17,3 @@ if __name__ == '__main__':
     evenlast([1, 3, 5]) == 30
     evenlast([6]) == 36
     evenlast([]) == 0
-    print(evenlast([]))
