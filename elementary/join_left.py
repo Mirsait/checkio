@@ -1,10 +1,9 @@
 
+def left_join(phrases):
+    return ','.join(phrases).replace('right', 'left')
 
-if left_join():
-    pass
 
-
-def test(arg):
+def test():
     left_join(("left", "right", "left", "stop")) == "left,left,left,stop"
     left_join(("bright aright", "ok")) == "bleft aleft,ok"
     left_join(("brightness wright",)) == "bleftness wleft"
