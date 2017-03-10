@@ -1,5 +1,16 @@
 def convert_to_ten(str_number, radix):
-    return -1
+    if (radix < 2 or radix > 36):
+        return -1
+    dist = {k:v for v, k in enumerate('0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ', start=1)}
+    str_number_len = len(str_number) - 1
+    sum = 0
+    for index, item in enumerate(str_number):
+        int_number = dist.get(item)-1
+        if  int_number >= radix:
+            return -1
+        exp = str_number_len - index
+        sum += (radix**exp * int_number)
+    return sum
 
 
 def test():
